@@ -33,7 +33,16 @@ Please, keep in mind that [OpenAI](https://openai.com/) checks for public API ke
 
 ### Installing
 
+```
+npm install
+npm run build
+```
+
 ### Usage
+
+```
+npm run start
+```
 
 ## Contributing
 
