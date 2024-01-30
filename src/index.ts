@@ -31,12 +31,12 @@ const main = () => {
       }
       messages.push(question);
       
-      const completion = await openai.chat.completions.create({
+      const completion: OpenAI.Chat.ChatCompletion = await openai.chat.completions.create({
         model: 'gpt-3.5-turbo',
         messages: messages
       });
       
-      const answer = completion.choices[0].message.content;
+      const answer: string | null = completion.choices[0].message.content;
       
       if (!!answer) {
         console.log(chalk.magenta('Bot: ') + answer);

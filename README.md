@@ -12,4 +12,4 @@ A CLI chatbot based on GPT-3.5 written in Node.js
 
 ### Notes
 
-It works with **Node.js v20.x** or higher only.
+It works with **Node.js v20.x** or higher, since it requires native `.env` files support.
