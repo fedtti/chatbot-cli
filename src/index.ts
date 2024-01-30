@@ -8,7 +8,7 @@ import chalk from 'chalk';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 /**
- * 
+ * Start the CLI interaction.
  */
 const main = () => {
   const messages: any[] = [];
