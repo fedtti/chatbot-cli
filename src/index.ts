@@ -13,14 +13,14 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const main = () => {
   const messages: any[] = [];
 
-  console.log(chalk.bold('Enter a user message below.'));
+  console.log(chalk.bold('Enter a user message below.\n'));
 
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   });
 
-  rl.setPrompt('\nYou: ');
+  rl.setPrompt(chalk.blue('You: '));
   rl.prompt();
 
   rl.on('line', async (input) => {
@@ -39,7 +39,7 @@ const main = () => {
       const answer = completion.choices[0].message.content;
       
       if (!!answer) {
-        console.log(chalk(`Bot: ${answer}`));
+        console.log(chalk.magenta('Bot: ') + answer);
         messages.push({
           role: 'assistant',
           content: answer
@@ -48,12 +48,12 @@ const main = () => {
 
       rl.prompt();
     } catch (err) {
-      console.error(chalk.bold.red(`Error: ${err}`));
+      console.error(chalk.bold.red(`Error: ${err}.`));
     }
   });
 
   rl.on('close', () => {
-    console.log('\nThank you!');
+    console.log(chalk.bold('\n\nHave a nice day.'));
   });
 };
 
