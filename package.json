@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Chatbot × OpenAI (GTP-3.5)",
   "keywords": [
+    "cli",
     "gpt",
     "nodejs",
     "openai"
