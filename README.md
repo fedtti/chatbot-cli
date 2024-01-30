@@ -46,9 +46,7 @@ npm run start
 
 ## Contributing
 
-Please, use [SemVer](https://semver.org/) and [Conventional Commits](https://www.conventionalcommits.org/).
-
-[Hacktoberfest](https://hacktoberfest.com/) participants are welcome.
+Please, use [SemVer](https://semver.org/) and [Conventional Commits](https://www.conventionalcommits.org/) in pull requests. [Hacktoberfest](https://hacktoberfest.com/) participants are welcome.
 
 ### Notes
 
