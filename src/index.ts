@@ -3,7 +3,7 @@ import * as readline from 'readline';
 import chalk from 'chalk';
 
 /**
- * Set OpenAI API key.
+ * Set an OpenAI API key.
  */
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
