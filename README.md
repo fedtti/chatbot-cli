@@ -12,6 +12,14 @@ A CLI chatbot based on GPT-3.5 written in Node.js
 
 ## Instructions
 
+Put an active API key in a `.env` file:
+
+```
+OPENAI_API_KEY=YOUR_API_KEY
+```
+
+Replace `YOUR_API_KEY` with your API key.
+
 ## Contributing
 
 ### Requirements
