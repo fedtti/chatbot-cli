@@ -18,7 +18,7 @@ Put an active API key in a `.env` file:
 OPENAI_API_KEY=YOUR_API_KEY
 ```
 
-Replace `YOUR_API_KEY` with your API key.
+Replace `YOUR_API_KEY` with your own API key. Please, keep in mind that OpenAI checks for valid API keys hashes on the web, so it will be invalidated if you publish it somewhere.
 
 ## Contributing
 
