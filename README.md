@@ -50,4 +50,4 @@ Please, use [SemVer](https://semver.org/) and [Conventional Commits](https://www
 
 ### Notes
 
-It works with **Node.js v20.x** or higher, since it requires native `.env` files support.
+It works with **Node.js v20.x** or higher.
