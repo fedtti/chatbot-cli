@@ -1,12 +1,14 @@
 import { select } from '@inquirer/prompts';
 import { spawn } from 'child_process';
 
+const execute = process.env.NODE_ENV === 'production' ? 'node' : 'tsx';
+
 const answer = await select({
   message: 'Please, select one of the available AI system:',
   choices: [
     {
       name: 'GPT',
-      value: `node --env-file=.env @/providers/openai.ts`
+      value: `${execute} ./src/providers/openai.ts`
     }
   ]
 });
