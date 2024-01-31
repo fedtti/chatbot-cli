@@ -7,6 +7,8 @@ dotenv.config();
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
+console.clear();
+
 const main = async () => {
   console.log(chalk.bold(`Enter a user message below.\n`));
 

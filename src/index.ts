@@ -1,6 +1,8 @@
 import { select } from '@inquirer/prompts';
 import { spawn } from 'child_process';
 
+console.clear();
+
 const execute = process.env.NODE_ENV === 'production' ? 'node' : 'tsx';
 
 const answer = await select({
