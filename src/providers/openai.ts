@@ -5,10 +5,10 @@ import chalk from 'chalk';
 
 dotenv.config();
 
-const main = async () => {
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-  console.log(chalk.bold('Enter a user message below.\n'));
+const main = async () => {
+  console.log(chalk.bold(`Enter a user message below.\n`));
 
   const messages: any[] = [];
 
