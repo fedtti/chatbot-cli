@@ -1,21 +1,35 @@
 import OpenAI from 'openai';
+import { select, input } from '@inquirer/prompts';
 import * as readline from 'readline';
 import chalk from 'chalk';
+
+/**
+ * Choose between available AI systems.
+ */
+const answer = await select({
+  message: 'Please, select the AI system:',
+  choices: [
+    {
+      name: 'GPT',
+      value: 'gpt'
+    }
+  ]
+});
 
 /**
  * Set an OpenAI API key.
  */
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
 /**
  * Start the CLI interaction.
  */
 const main = () => {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
   const messages: any[] = [];
 
   console.log(chalk.bold('Enter a user message below.\n'));
