@@ -7,6 +7,11 @@ import chalk from 'chalk';
  */
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
 /**
  * Start the CLI interaction.
  */
@@ -14,11 +19,6 @@ const main = () => {
   const messages: any[] = [];
 
   console.log(chalk.bold('Enter a user message below.\n'));
-
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
 
   rl.setPrompt(chalk.blue('You: '));
   rl.prompt();
