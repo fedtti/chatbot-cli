@@ -1,4 +1,4 @@
-# Chatbot × OpenAI (GPT-3.5)
+# Chatbot × AI (GPT-3.5)
 
 A CLI chatbot based on GPT-3.5 written in Node.js
 
