@@ -1,6 +1,6 @@
 # Chatbot × AI (GPT-3.5)
 
-A CLI chatbot based on GPT-3.5 written in Node.js
+A CLI text-only chatbot based on AI systems written in Node.js
 
 - [Description](#description)
 - [Instructions](#instructions)
@@ -12,7 +12,7 @@ A CLI chatbot based on GPT-3.5 written in Node.js
 
 ## Description
 
-This chatbot let you ask questions from the CLI to GPT-3.5 using Node.js.
+This chatbot let you ask text-only questions from the CLI to different AI systems (GPT-3.5) using Node.js.
 
 ## Instructions
 

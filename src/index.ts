@@ -1,6 +1,4 @@
-import { select, input } from '@inquirer/prompts';
-
-const start = process.env.NODE_ENV === 'production' ? 'node' : 'tsx';
+import { select } from '@inquirer/prompts';
 
 /**
  * Choose between available AI systems.
@@ -10,7 +8,7 @@ const answer = await select({
   choices: [
     {
       name: 'GPT',
-      value: `${start} @/providers/openai.ts`
+      value: 'openai'
     }
   ]
 });
