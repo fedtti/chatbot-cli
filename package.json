@@ -1,6 +1,6 @@
 {
   "name": "chatbot",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Chatbot × AI (GPT-3.5)",
   "keywords": [
     "cli",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
     "@tsconfig/node20": "^20.1.2",
+    "@types/inquirer": "^9.0.7",
     "@types/node": "^20.11.13",
     "rollup": "^4.9.6",
     "tsx": "^4.7.0",

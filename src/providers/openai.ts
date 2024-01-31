@@ -17,7 +17,7 @@ const main = async () => {
       message: chalk.blue('You: ')
     });
 
-    question.toLowerCase() === 'exit' ? (console.log(chalk.bold('Have a nice day.')), process.exit(0)): 0;
+    question.toLowerCase() === 'exit' ? (console.log(chalk.bold(`\n\rHave a nice day.`)), process.exit(0)): 0;
 
     messages.push({
       role: 'user',
