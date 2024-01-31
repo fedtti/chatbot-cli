@@ -1,14 +1,11 @@
+import * as dotenv from 'dotenv';
 import OpenAI from 'openai';
 import { input } from '@inquirer/prompts';
 import chalk from 'chalk';
 
-/**
- * Start the CLI interaction.
- */
-export const main = async () => {
-  /**
-   * Set an OpenAI API key.
-   */
+dotenv.config();
+
+const main = async () => {
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
   console.log(chalk.bold('Enter a user message below.\n'));
@@ -20,7 +17,7 @@ export const main = async () => {
       message: chalk.blue('You: ')
     });
 
-    question.toLowerCase() === ('exit' || 'quit') ? process.exit(0): 0;
+    question.toLowerCase() === 'exit' ? (console.log(chalk.bold('Have a nice day.')), process.exit(0)): 0;
 
     messages.push({
       role: 'user',
