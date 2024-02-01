@@ -12,7 +12,9 @@ A CLI text-only chatbot based on AI systems written in Node.js
 
 ## Description
 
-This chatbot let you ask text-only questions from the CLI to different AI systems (GPT-3.5) using Node.js.
+This chatbot let you ask text-only questions from the CLI to different AI systems using Node.js.
+
+1. [GPT-3.5](https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates)
 
 ## Instructions
 
