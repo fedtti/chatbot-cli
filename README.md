@@ -1,4 +1,4 @@
-# Chatbot × AI (GPT-3.5)
+# Chatbot × AI
 
 A CLI text-only chatbot based on AI systems written in Node.js
 
@@ -14,7 +14,8 @@ A CLI text-only chatbot based on AI systems written in Node.js
 
 This chatbot let you ask text-only questions from the CLI to different AI systems using Node.js.
 
-1. [GPT-3.5](https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates)
+1. [OpenAI GPT-3.5](https://platform.openai.com/docs/api-reference)
+2. [Wolfram|Alpha LLM](https://products.wolframalpha.com/llm-api/documentation)
 
 ## Instructions
 
