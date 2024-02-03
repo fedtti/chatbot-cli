@@ -26,9 +26,9 @@ OPENAI_API_KEY=YOUR_API_KEY
 WOLFRAMALPHA_APP_ID=YOUR_APP_ID
 ```
 
-Replace `YOUR_API_KEY` with your own API key hash.
+Replace `YOUR_API_KEY` with your own API key and/or `YOUR_APP_ID` with your own APP ID.
 
-Please, keep in mind that [OpenAI](https://openai.com/) checks for public API keys hashes, so **it will be invalidated if you publish it** somewhere on the web.
+Please, keep in mind that [OpenAI](https://openai.com/) checks for public API keys, so **it will be invalidated if you publish it** somewhere on the web.
 
 ### Requirements
 
