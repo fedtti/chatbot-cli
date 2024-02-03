@@ -5,7 +5,7 @@ import chalk from 'chalk';
 
 dotenv.config();
 
-const token = process.env.WOLFRAMALPHA_APP_ID;
+const app_id = process.env.WOLFRAMALPHA_APP_ID;
 
 console.clear();
 
@@ -21,16 +21,18 @@ const main = async () => {
 
     encodeURIComponent(question).replace(/%20/g, '+');
 
-    const options = {
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-    }
+    let answer;
 
-    const answer = await needle.get(`https://www.wolframalpha.com/api/v1/llm-api?input=${question}`, options);
+    await needle('get', `https://www.wolframalpha.com/api/v1/llm-api?appid=${app_id}&input=${question}&output=json`)
+                .then((res) => {
+                  answer = res.body;
+                })
+                .catch((err) => {
+                  console.error(chalk.red.bold(`\n\r${err}.`));
+                });
 
     if (!!answer) {
-      console.log(chalk.magenta('Bot: ') + answer);
+      console.log(chalk.magenta('Bot: ') + JSON.stringify(answer));
     }
 
     main();
