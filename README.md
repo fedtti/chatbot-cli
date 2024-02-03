@@ -19,7 +19,7 @@ This chatbot let you ask text-only questions from the CLI to different AI system
 
 ## Instructions
 
-Put active credential(s) in a `.env` file:
+Put active credentials in a `.env` file:
 
 ```
 OPENAI_API_KEY=YOUR_API_KEY

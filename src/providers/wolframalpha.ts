@@ -23,7 +23,7 @@ const main = async () => {
 
     let answer;
 
-    await needle('get', `https://www.wolframalpha.com/api/v1/llm-api?appid=${app_id}&input=${question}&output=json`)
+    await needle('get', `https://www.wolframalpha.com/api/v1/llm-api?appid=${app_id}&input=${question}&output=plaintext`)
                 .then((res) => {
                   answer = res.body;
                 })
@@ -32,7 +32,7 @@ const main = async () => {
                 });
 
     if (!!answer) {
-      console.log(chalk.magenta('Bot: ') + JSON.stringify(answer));
+      console.log(chalk.magenta('Bot: ') + answer);
     }
 
     main();
