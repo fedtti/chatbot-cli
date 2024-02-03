@@ -14,7 +14,7 @@ const answer = await select({
     },
     {
       name: 'Wolfram|Alpha',
-      value: `${execute} ./scr/providers/wolframalpha.ts`
+      value: `${execute} ./src/providers/wolframalpha.ts`
     }
   ]
 });
