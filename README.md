@@ -23,6 +23,7 @@ Put an active API key in a `.env` file:
 
 ```
 OPENAI_API_KEY=YOUR_API_KEY
+WOLFRAMALPHA_APP_ID=YOUR_APP_ID
 ```
 
 Replace `YOUR_API_KEY` with your own API key hash.
