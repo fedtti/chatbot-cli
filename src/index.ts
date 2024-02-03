@@ -11,6 +11,10 @@ const answer = await select({
     {
       name: 'GPT',
       value: `${execute} ./src/providers/openai.ts`
+    },
+    {
+      name: 'Wolfram|Alpha',
+      value: `${execute} ./scr/providers/wolframalpha.ts`
     }
   ]
 });

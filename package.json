@@ -7,7 +7,8 @@
     "gpt",
     "hacktoberfest",
     "nodejs",
-    "openai"
+    "openai",
+    "wolframalpha"
   ],
   "homepage": "https://github.com/fedtti/chatbot",
   "bugs": {
@@ -18,14 +19,17 @@
   "scripts": {
     "dev": "tsx ./src/index.ts",
     "dev:openai": "tsx ./src/providers/openai.ts",
+    "dev:wolframalpha": "tsx ./src/providers/wolframalpha.ts",
     "build": "rollup -c ./rollup.config.js",
     "start": "node ./dist/index.js",
-    "start:openai": "node ./dist/providers/openai.js"
+    "start:openai": "node ./dist/providers/openai.js",
+    "start:wolframalpha": "node ./dist/providers/wolframalpha.js"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
     "@tsconfig/node20": "^20.1.2",
     "@types/inquirer": "^9.0.7",
+    "@types/needle": "^3.3.0",
     "@types/node": "^20.11.13",
     "rollup": "^4.9.6",
     "tsx": "^4.7.0",
@@ -35,6 +39,7 @@
     "@inquirer/prompts": "^3.3.2",
     "chalk": "^5.3.0",
     "dotenv": "^16.4.1",
+    "needle": "^3.3.1",
     "openai": "^4.26.0"
   },
   "type": "module",
