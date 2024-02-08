@@ -1,4 +1,4 @@
-# Chatbot CLI × AI
+# Chatbot CLI
 
 A CLI text-only chatbot based on AI systems written in Node.js
 
