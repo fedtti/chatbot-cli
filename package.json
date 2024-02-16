@@ -10,9 +10,9 @@
     "llm",
     "nodejs"
   ],
-  "homepage": "https://github.com/fedtti/chatbot",
+  "homepage": "https://github.com/fedtti/chatbot-cli",
   "bugs": {
-    "url": "https://github.com/fedtti/chatbot/issues"
+    "url": "https://github.com/fedtti/chatbot-cli/issues"
   },
   "license": "MIT",
   "author": "Federico Moretti <hello@federicomoretti.it>",
