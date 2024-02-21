@@ -37,6 +37,7 @@ Please, keep in mind that [OpenAI](https://openai.com/) checks for public API ke
 - [Rollup](https://rollupjs.org/)
 - [OpenAI](https://openai.com/) (optional)
 - [Wolfram|Alpha](https://www.wolframalpha.com/) (optional)
+- [Inquirer.js](https://www.npmjs.com/package/inquirer)
 - [Chalk](https://www.npmjs.com/package/chalk)
 
 ### Installing
