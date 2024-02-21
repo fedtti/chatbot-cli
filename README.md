@@ -33,6 +33,10 @@ Please, keep in mind that [OpenAI](https://openai.com/) checks for public API ke
 ### Requirements
 
 - [Node.js](https://nodejs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Rollup](https://rollupjs.org/)
+- [OpenAI](https://openai.com/) (optional)
+- [Wolfram|Alpha](https://www.wolframalpha.com/) (optional)
 - [Chalk](https://www.npmjs.com/package/chalk)
 
 ### Installing
