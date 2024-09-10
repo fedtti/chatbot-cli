@@ -61,7 +61,7 @@ export const main = async () => {
 
     if (!!quit) {
       const save: boolean = await confirm({
-        message: 'Do you want to save the message history?',
+        message: 'Do you want to save the chat history?',
         default: false
       });
 
