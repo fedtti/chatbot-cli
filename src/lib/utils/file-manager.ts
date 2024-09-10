@@ -8,7 +8,7 @@ import chalk from 'chalk';
 export const output = async (content: any): Promise<any> => {
   try {
     await fs.writeFile('./chat-history.txt', content);
-    console.info(chalk.bold(`\n\rThe chat history successfully saved in the './chat-history.txt' file.`));
+    console.info(chalk.bold(`\n\rThe chat history has been successfully saved in the './chat-history.txt' file.`));
   } catch (error) {
     console.error(chalk.red.bold(`\n\r${error}`));
   }
