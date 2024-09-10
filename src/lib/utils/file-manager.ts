@@ -5,7 +5,7 @@ import chalk from 'chalk';
  * Read the specified file and pass its content back to the LLM provider.
  * @param {string} file - File to be read.
  */
-export const prompt = (): any => {
+export const prompt: any = (): any => {
   try {
     const data = readFileSync('./dist/lib/data/example.txt', { encoding: 'utf-8' });
     return JSON.stringify(data);
@@ -18,11 +18,11 @@ export const prompt = (): any => {
  * Save the chat history into a './chat-history.txt' file.
  * @param {string} content - Chat history.
  */
-export const output = (content: any): void => {
-  // TODO: @fedtti - Format the chat history to be more human-readable.
+export const output: any = (content: any): void => {
+  const data = JSON.parse(content);
 
   try {
-    const data = writeFileSync('./chat-history.txt', content);
+    writeFileSync('./chat-history.txt', content);
     console.info(chalk.bold(`\n\rThe chat history has been successfully saved in the './chat-history.txt' file.`));
   } catch (error) {
     console.error(chalk.red.bold(`\n\r${error}`));
