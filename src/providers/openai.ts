@@ -2,7 +2,8 @@ import * as dotenv from 'dotenv';
 import OpenAI from 'openai';
 import { input, confirm, select } from '@inquirer/prompts';
 import chalk from 'chalk';
-import { output } from '../lib/utils/file-manager.js';
+import { prompt, output } from '../lib/utils/file-manager.js';
+import { ChatCompletionTool } from 'openai/resources/index.mjs';
 
 dotenv.config(); // Ensure backward compatibility.
 
@@ -17,12 +18,20 @@ const history: any[] = [];
  */
 export const main = async () => {
   try {
+    if (process.argv.length === 2 && history.length === 0) {
+      const message: string = await prompt(process.argv[2]);
+      history.push({
+        role: 'system',
+        content: message
+      })
+    }
+
     const question: string = await input({
       message: chalk.blue('You: ')
     });
     const regex = /exit|quit/gi
-    const bye = chalk.bold(`\n\rHave a nice day.`);
-    question.match(regex) ? (console.info(bye), process.exit(0)): 0;
+    const greetings = chalk.bold(`\n\rHave a nice day.`);
+    question.match(regex) ? (console.info(greetings), process.exit(0)): 0;
     history.push({
       role: 'user',
       content: question
@@ -69,7 +78,7 @@ export const main = async () => {
         await output(JSON.stringify(history));
       }
 
-      console.info(bye);
+      console.info(greetings);
       process.exit(0);
     }
     
