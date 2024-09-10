@@ -2,12 +2,11 @@ import { readFileSync, writeFileSync } from 'fs';
 import chalk from 'chalk';
 
 /**
- * Read the specified file and pass its content back to the LLM provider.
- * @param {string} file - File to be read.
+ * Read the file and pass its content back to the provider in use.
  */
 export const prompt: any = (): any => {
   try {
-    const data = readFileSync('./dist/lib/data/example.txt', { encoding: 'utf-8' });
+    const data = readFileSync('./dist/lib/data/example.txt', { encoding: 'utf-8' }); // TODO: @fmoretti - Add support for different files in the same folder.
     return JSON.stringify(data);
   } catch (error) {
     console.error(chalk.red.bold(`\n\r${error}`));

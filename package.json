@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "CS50x • Final Project by Federico Moretti",
   "keywords": [
+    "cs50x",
     "nodejs",
     "azure",
     "openai",
