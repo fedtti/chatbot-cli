@@ -17,6 +17,15 @@ const history: any[] = [];
  */
 export const main = async (): Promise<void> => {
   try {
+    const message = await prompt();
+
+    if (!!message) {
+      history.push({
+        role: 'system',
+        content: message
+      })
+    }
+
     const question: string = await input({
       message: chalk.blue('You: ')
     });
