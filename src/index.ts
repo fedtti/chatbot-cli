@@ -3,7 +3,7 @@
 import * as dotenv from 'dotenv';
 import chalk from 'chalk';
 import figlet from 'figlet';
-import { spawn } from 'child_process';
+import { main } from './providers/openai.js';
 
 dotenv.config(); // Ensure backward compatibility.
 
@@ -28,14 +28,11 @@ const run: any = (): void => {
   init();
 
   try {
-    console.clear();
-    console.info(chalk.bold('Enter a user message below.'));
-
     setTimeout(() => {
-      const command = process.env.NODE_ENV === 'production' ? 'node' : 'tsx';
-      const execute: any= `${command} ./src/providers/openai.ts`;
-      spawn(execute, { stdio: 'inherit', shell: true });
-    }, 500);
+      console.clear();
+      console.info(chalk.bold('Enter a user message below.\n\r'));
+      main();
+    }, 1000);
   } catch (error) {
     console.error(chalk.red.bold(`\n\r${error}`));
   }

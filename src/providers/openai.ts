@@ -3,7 +3,6 @@ import OpenAI from 'openai';
 import { input, confirm, select } from '@inquirer/prompts';
 import chalk from 'chalk';
 import { prompt, output } from '../lib/utils/file-manager.js';
-import { ChatCompletionTool } from 'openai/resources/index.mjs';
 
 dotenv.config(); // Ensure backward compatibility.
 
@@ -16,21 +15,13 @@ const history: any[] = [];
 /**
  * Start a conversation between the user and the bot.
  */
-export const main = async () => {
+export const main = async (): Promise<void> => {
   try {
-    if (process.argv.length === 2 && history.length === 0) {
-      const message: string = await prompt(process.argv[2]);
-      history.push({
-        role: 'system',
-        content: message
-      })
-    }
-
     const question: string = await input({
       message: chalk.blue('You: ')
     });
     const regex = /exit|quit/gi
-    const greetings = chalk.bold(`\n\rHave a nice day.`);
+    const greetings = chalk.bold('\n\rHave a nice day.');
     question.match(regex) ? (console.info(greetings), process.exit(0)): 0;
     history.push({
       role: 'user',
@@ -47,7 +38,7 @@ export const main = async () => {
     const answer: string | null = response.choices[0].message.content;
 
     if (!!answer) {
-      console.log(chalk.magenta('Bot: ') + answer);
+      console.log(`${chalk.magenta('Bot: ')} ${answer}`);
       history.push({
         role: 'assistant',
         content: answer
@@ -81,11 +72,9 @@ export const main = async () => {
       console.info(greetings);
       process.exit(0);
     }
-    
+
     main();
   } catch (error) {
     console.error(chalk.red.bold(`\n\r${error}`));
   }
 };
-
-main();

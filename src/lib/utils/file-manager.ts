@@ -7,6 +7,7 @@ import chalk from 'chalk';
  */
 export const prompt = async (file: string): Promise<any> => {
   try {
+
     const data = await readFile(file, { encoding: 'utf-8' });
     return JSON.stringify(data);
   } catch (error) {
@@ -20,7 +21,7 @@ export const prompt = async (file: string): Promise<any> => {
  */
 export const output = async (content: any): Promise<any> => {
   // TODO: @fedtti - Format the chat history to be more human-readable.
-  
+
   try {
     const data = await writeFile('./chat-history.txt', content);
     console.info(chalk.bold(`\n\rThe chat history has been successfully saved in the './chat-history.txt' file.`));
