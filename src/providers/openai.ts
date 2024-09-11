@@ -2,7 +2,7 @@ import * as dotenv from 'dotenv';
 import OpenAI from 'openai';
 import { input, confirm, select } from '@inquirer/prompts';
 import chalk from 'chalk';
-import { prompt, output } from '../lib/utils/file-manager.js';
+import { list, prompt, output } from '../lib/utils/file-manager.js';
 
 dotenv.config(); // Ensure backward compatibility.
 
@@ -17,13 +17,35 @@ const history: any[] = [];
  */
 export const main = async (): Promise<void> => {
   try {
-    const message = await prompt();
+    const files: string[] = await list();
 
-    if (!!message) {
-      history.push({
-        role: 'system',
-        content: message
-      })
+    if (!!files) {
+      const data: any[] = [];
+      files.forEach(file => {
+        data.push({
+          name: file,
+          value: file
+        });
+      });
+
+      const answer: string | undefined = await select({
+        message: 'Select a file to use as a prompt:',
+        choices: [
+          ...data,
+          {
+            name: 'None',
+            value: undefined
+          }
+        ]
+      });
+
+      if (!!answer) {
+        const message: string = await prompt(answer);
+        history.push({
+          role: 'system',
+          content: message
+        })
+      }
     }
 
     const question: string = await input({

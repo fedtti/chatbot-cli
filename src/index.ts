@@ -21,7 +21,7 @@ const init: any = (): void => {
 };
 
 /**
- * Ask the user to query the ChatGPT-4o model provided by Azure OpenAI Service.
+ * Ask the user to query the ChatGPT-4o model provided by Azure OpenAI Service¹.
  */
 const run: any = (): void => {
   console.clear();
@@ -39,3 +39,5 @@ const run: any = (): void => {
 };
 
 run();
+
+// ¹ More models will be available soon.

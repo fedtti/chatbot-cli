@@ -1,17 +1,38 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { readdirSync, readFileSync, writeFileSync } from 'fs';
 import chalk from 'chalk';
 
+const path: string = './dist/lib/data';
+
 /**
- * Read the file and pass its content back to the provider in use.
+ * Read the file(s) list and returns an array of names.
+ * @returns {string}
  */
-export const prompt: any = (): any => {
+export const list: any = (): string[] | void => {
   try {
-    const data = readFileSync('./dist/lib/data/example.txt', { encoding: 'utf-8' }); // TODO: @fmoretti - Add support for different files in the same folder.
-    return JSON.stringify(data);
+    let data: string[] = [];
+    const dir = readdirSync(path);
+    dir.forEach(name => {
+      data.push(name);
+    });
+    return !!data ? data : undefined;
   } catch (error) {
     console.error(chalk.red.bold(`\n\r${error}`));
   }
 };
+
+/**
+ * Read the file contents and pass them back to the active model as a prompt.
+ * @param {string} file - File to read.
+ * @returns {string}
+ */
+export const prompt: any = (file: string): string | void => {
+  try {
+    const data = readFileSync(`${path}/${file}`, { encoding: 'utf-8' });
+    return !!data ? data : undefined;
+  } catch (error) {
+    console.error(chalk.red.bold(`\n\r${error}`));
+  }
+}
 
 /**
  * Save the chat history into a './chat-history.txt' file.
