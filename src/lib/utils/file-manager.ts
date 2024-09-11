@@ -38,11 +38,13 @@ export const prompt: any = (file: string): string | void => {
  * Save the chat history into a './chat-history.txt' file.
  * @param {string} content - Chat history.
  */
-export const output: any = (content: any): void => {
-  const data = JSON.parse(content);
+export const output: any = (contents: any): void => {
+  // TODO: @fedtti - Save contents in a more human-readable format.
+
+  const data = JSON.parse(contents);
 
   try {
-    writeFileSync('./chat-history.txt', content);
+    writeFileSync('./chat-history.txt', contents);
     console.info(chalk.bold(`\n\rThe chat history has been successfully saved in the './chat-history.txt' file.`));
   } catch (error) {
     console.error(chalk.red.bold(`\n\r${error}`));
