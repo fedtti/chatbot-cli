@@ -3,6 +3,7 @@
 import * as dotenv from 'dotenv';
 import chalk from 'chalk';
 import figlet from 'figlet';
+import { select } from '@inquirer/prompts';
 import { main as chatGpt } from './providers/openai.js';
 import { main as wolframAlpha } from './providers/wolframalpha.js';
 
@@ -29,10 +30,30 @@ const run: any = (): void => {
   init();
 
   try {
-    setTimeout(() => {
+    setTimeout(async (): Promise<void> => {
       console.clear();
+
+      const answer = await select({
+        message: 'Select a provider:',
+        choices: [
+          {
+            name: 'ChatGPT',
+            value: 'chatgpt'
+          },
+          {
+            name: 'Wolfram|Alpha',
+            value: 'wolframalpha'
+          }
+        ]
+      });
+
       console.info(chalk.bold('Enter a user message below.\n\r'));
-      chatGpt();
+
+      if (answer === 'chatgpt') {
+        chatGpt();
+      } else {
+        wolframAlpha();
+      }
     }, 1000);
   } catch (error) {
     console.error(chalk.red.bold(`\n\r${error}`));

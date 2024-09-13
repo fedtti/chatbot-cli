@@ -22,23 +22,27 @@ export const main = async (): Promise<void> => {
       role: 'user',
       content: question
     });
+    encodeURIComponent(question).replace(/%20/g, '+');
 
-    const url: string = `https://www.wolframalpha.com/api/v1/llm-api?&input=${question}&format=plaintext`;
+    const url: string = `https://www.wolframalpha.com/api/v1/llm-api?&input=${question}`;
     const token: string | undefined = process.env.WOLFRAMALPHA_APP_ID;
     const response: Response = await fetch(url, {
       headers: {
-        'Content-Type': 'json',
         'Authorization': `Bearer ${token}`
       }
     });
 
-    const answer = response.json();
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}.`);
+    }
+
+    const answer = await response.text();
 
     if (!!answer) {
       console.log(`${chalk.magenta('Bot: ')} ${answer}`);
       history.push({
         role: 'assistant',
-        content: answer
+        content: JSON.stringify(answer)
       });
     }
 
