@@ -36,7 +36,7 @@ export const main = async (): Promise<void> => {
       throw new Error(`Response status: ${response.status}.`);
     }
 
-    const answer = await response.text();
+    const answer: string = await response.text();
 
     if (!!answer) {
       console.log(`${chalk.magenta('Bot: ')} ${answer}`);
