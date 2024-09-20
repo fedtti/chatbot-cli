@@ -10,16 +10,17 @@ CS50x • Final Project by Federico Moretti
 
 #### Prerequisites
 
-It has been tested with Node v20.x, but it also includes `dotenv` to ensure backward compatibility: just be sure to use a version that supports ESM. 
+It has been tested with Node v20.x, but it also includes `dotenv` to ensure backward compatibility: just be sure to use a version that supports ESM. I chose [npm](https://www.npmjs.com/) as the package manager.
 
 #### Installation
 
-Download the sources by either cloning this repository or download its compressed archive, then install the dependencies.
+Download the sources by either cloning this repository or download its compressed archive, then install the dependencies from the uncompressed sources folder.
 
 ```bash
-$ cd chatbot-cli/
 $ npm i
 ```
+
+Please, remember to add your own private keys to an `.env` file. You can use `.env.example` to complete the proper configuration.
 
 #### Usage
 
@@ -31,3 +32,5 @@ $ npx chatbot-cli
 
 ### Features
 
+- Prompts (for ChatGPT 4o only)
+- Saving conversations to a file
