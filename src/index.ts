@@ -23,7 +23,7 @@ const init: any = (): void => {
 };
 
 /**
- * Ask the user to query the chosen model between ChatGPT-4o provided by Azure OpenAI Service and Wolfram|Alpha¹.
+ * Ask the user to query the chosen model between ChatGPT-4o provided by Azure OpenAI Service and Wolfram|Alpha.¹
  */
 const run: any = (): void => {
   console.clear();

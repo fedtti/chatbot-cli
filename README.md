@@ -1,4 +1,5 @@
 # Chatbot CLI
-#### Video Demo:
-#### Description:
 
+Final Project by Federico Moretti
+
+## Description
