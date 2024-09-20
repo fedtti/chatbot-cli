@@ -32,5 +32,5 @@ $ npx chatbot-cli
 
 ### Features
 
-- Prompts (for ChatGPT 4o only)
+- Prompts (for GPT-4o only)
 - Saving conversations to a file
