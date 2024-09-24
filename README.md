@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div align="center">
   <img src="./assets/harvard-university-shield.svg" alt="Harvard University Shield">
 </div>
 
