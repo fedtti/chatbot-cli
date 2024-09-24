@@ -1,3 +1,5 @@
+<img src="./assets/harvard-university-shield.svg" alt="Harvard University Shield" style="display: block; margin: 0 auto;">
+
 # Chatbot CLI
 
 CS50x • Final Project by Federico Moretti
