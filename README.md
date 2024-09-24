@@ -1,4 +1,4 @@
-<img src="./assets/harvard-university-shield.svg" alt="Harvard University Shield" style="display: block; margin: 0 auto;">
+<img src="./assets/harvard-university-shield.svg" alt="Harvard University Shield" style="display: block; margin: 0 auto; text-align: center;">
 
 # Chatbot CLI
 
