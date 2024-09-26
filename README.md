@@ -1,10 +1,10 @@
-<div align="center">
-  <img src="./assets/harvard-university-shield.svg" alt="Harvard University Shield">
-</div>
-
 # Chatbot CLI
 
 CS50x • Final Project by Federico Moretti
+
+<div align="center">
+  <img src="./assets/harvard-university-shield.svg" alt="Harvard University Shield">
+</div>
 
 ## Description
 
@@ -39,3 +39,5 @@ $ npx chatbot-cli
 
 - Prompts (for GPT-4o only)
 - Saving conversations to a file
+
+### Contributing
